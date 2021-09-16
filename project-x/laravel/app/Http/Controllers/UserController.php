@@ -29,7 +29,9 @@ class UserController extends Controller
      */
     public function show(User $user)
     {
-        //
+        $user = request()->user();
+
+        return response()->json($user);
     }
 
     /**
